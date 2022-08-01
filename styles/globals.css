@@ -1,0 +1,175 @@
+/*
+/// -------------------------------------------------------------------------------------------------------
+/// :: Léia Munhai - Developed by Hebert Richard | 19/07/2022 - 18:30.
+/// :: WARNING: This computer program is protected by copyright law and international treaties.
+/// :: Unauthorized duplication or distribution of this program, or any portion of it, may result
+/// :: in severe civil or criminal penalties, and will be prosecuted to the maximum extent possible
+/// :: under the law.
+/// ::
+/// :: v.1.0 - 19/07/2022 - Implementation.
+/// -------------------------------------------------------------------------------------------------------
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+  font: inherit;
+  font-family: 'Roboto', sans-serif;
+  vertical-align: baseline;
+}
+  
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+  
+body {
+  line-height: 1;
+}
+  
+ol, ul {
+  list-style: none;
+}
+  
+blockquote, q {
+  quotes: none;
+}
+  
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+  
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Site Colors */
+:root {
+  --Roman: #d95f69;
+  --Azure: #f0f2f2;
+  --ClamShell: #d9b1a3;
+  --SoyaBean: #735048;
+  --Cinnabar: #d94343;
+  --Nero: #1e1e1e;
+}
+
+body {
+  background-color: var(--Azure);
+}
+
+/* header.jsx */
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  margin: 0; 
+  background: white;
+  padding: 0.300rem;
+  margin-bottom: 5rem;
+}
+
+.navigation li {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+  
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: var(--Cinnabar);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+  
+.navigation a:hover {
+  color: var(--Nero);
+  transition: all 0.5s ease-in-out;
+}
+  
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+  
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/* logo.jsx */
+.logo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* slider.jsx */
+.flex-container {
+  position: relative;
+  top: 6rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-leftItem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: solid 5px #FFF;
+}
+
+.flex-rightItem {
+  background-color: #EDDFCE;
+  border-radius: 15px;
+  border: solid 5px #FFF;
+  padding: 3rem;
+  margin-left: -3rem!important;
+}
+
+.flex-rightItem h3 {
+  font-size: 2rem;
+  color: #4B3E30;
+  font-weight: 300;
+}
+
+@media (min-width: 300px) and (max-width: 1080px) {
+  .flex-rightItem {
+    margin: 0 !important;
+    text-align: center;
+  }
+}
+
+/* blog.jsx */
+.blog {
+  display: flex;
+  position: relative;
+  top: 50%;
+}
